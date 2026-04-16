@@ -1,38 +1,110 @@
-.wordContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.wordContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
 }
-.wordCard{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    margin: 0 auto;
-    gap: 20px;
-    background: linear-gradient(to bottom, #ffffff,#3690a0);
-    padding: 2rem;
-    border-radius: 30px;
+
+/* CARD */
+.wordCard {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  width: 100%;
+  max-width: 500px;
+
+  background: linear-gradient(to bottom, #ffffff,#3690a0);
+  backdrop-filter: blur(10px);
+
+  padding: 2rem;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  transition: 0.3s ease;
 }
-.wordCard h2{
-    font-size: 2.5rem;
-    text-align: center;
+
+
+
+/* TITLE */
+.wordCard h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #222;
 }
-.moreBtn{
-    cursor: pointer;
-    color: blue;
-    margin-left: 6
+
+/* AUDIO + TEXT */
+.audio-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
-.audio-text{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+.audio-text p {
+  color: #555;
+  font-size: 0.95rem;
 }
-button{
-    font-size: 1.3rem;
-    width: 50%;
-    margin: 0 auto;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
+
+/* DEFINITION */
+.definition {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* EXAMPLE */
+.example {
+  font-style: italic;
+  color: #666;
+}
+
+/* READ MORE BUTTON */
+.moreBtn {
+  cursor: pointer;
+  color: #0077ff;
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+.moreBtn:hover {
+  text-decoration: underline;
+}
+
+/* BUTTON */
+.wordCard button {
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+
+  width: fit-content;
+  margin: 0 auto;
+
+  border: none;
+  border-radius: 30px;
+  color: #0077ff;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.wordCard button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .wordCard {
+    padding: 1.5rem;
+  }
+
+  .wordCard h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width:375px){
+    .audio-text audio {
+        width: 100%;
+    }
 }
